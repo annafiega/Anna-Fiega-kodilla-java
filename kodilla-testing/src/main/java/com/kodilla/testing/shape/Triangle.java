@@ -22,8 +22,8 @@ class Triangle implements Shape {
         return shapeName;
 
     }
-
-    public double getField(double heigh, double base) {
+    @Override
+    public double getField() {
         return(heigh*base/2);
     }
 

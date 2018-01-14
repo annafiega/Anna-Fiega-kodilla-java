@@ -2,6 +2,8 @@ package com.kodilla.testing.shape;
 
 import org.junit.*;
 
+import java.util.ArrayList;
+
 public class ShapeCollectorTestSuite {
     private static int testCounter = 0;
 
@@ -22,15 +24,15 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testAddFigure (){
-        Circle circle = new Circle("circle", 2.5,3.14);
-        ShapeCollector shapeCollector = new ShapeCollector(circle);
+        Circle circle = new Circle("circle", 2.5);
+        ShapeCollector shapeCollector = new ShapeCollector (circle);
         shapeCollector.addFigure(circle);
         Assert.assertEquals(1, shapeCollector.getFiguresQuantity());
 
     }
     @Test
     public void testRemoveFigure(){
-        Circle circle = new Circle("circle", 2.5,3.14);
+        Circle circle = new Circle("circle", 2.5);
         ShapeCollector shapeCollector = new ShapeCollector(circle);
         shapeCollector.addFigure(circle);
         //When
@@ -42,14 +44,16 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testGetFigure(){
-        Circle circle = new Circle("circle", 2.5,3.14);
+
+        Circle circle = new Circle("circle", 2.5);
         ShapeCollector shapeCollector = new ShapeCollector(circle);
         shapeCollector.addFigure(circle);
         //when
-        ShapeCollector retrievedShape;
-        retrievedShape=shapeCollector.getFigure(0);
+        Shape retrievedShape;
+        retrievedShape= shapeCollector.getFigure(0);
         //then
         Assert.assertEquals(shapeCollector, retrievedShape);
 
     }
+
 }

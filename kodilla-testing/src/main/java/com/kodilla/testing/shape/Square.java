@@ -21,8 +21,9 @@ class Square implements Shape{
     public String getShapeName() {
        return shapeName;
     }
-
-    public double getField(double a) {
-                return a*a;
+    @Override
+    public double getField() {
+        return a*a;
     }
+
 }
