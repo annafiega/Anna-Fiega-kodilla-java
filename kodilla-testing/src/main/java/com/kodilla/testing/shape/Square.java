@@ -1,11 +1,14 @@
 package com.kodilla.testing.shape;
 
-public abstract class Square implements Shape{
+class Square implements Shape{
     double a;
+    String shapeName;
 
 
-    public Square(double a) {
+
+    public Square(String shapeName, double a) {
         this.a=a;
+        this.shapeName=shapeName;
 
     }
 
@@ -15,11 +18,11 @@ public abstract class Square implements Shape{
 
 
 
-    public void getShapeName() {
-        System.out.println("Squaer");
+    public String getShapeName() {
+       return shapeName;
     }
 
     public double getField(double a) {
-        return a*a;
+                return a*a;
     }
 }

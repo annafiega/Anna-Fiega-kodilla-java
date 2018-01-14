@@ -1,6 +1,7 @@
 package com.kodilla.testing.shape;
 
-public abstract class Triangle implements Shape {
+class Triangle implements Shape {
+    String shapeName;
     double heigh;
     double base;
 
@@ -17,8 +18,8 @@ public abstract class Triangle implements Shape {
         return base;
     }
 
-    public void getShapeName() {
-        System.out.println("Triangle");
+    public String getShapeName() {
+        return shapeName;
 
     }
 

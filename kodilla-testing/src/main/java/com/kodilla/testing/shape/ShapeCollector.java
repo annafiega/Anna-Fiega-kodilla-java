@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ShapeCollector {
 
+    private String shapeName;
     private Shape shape;
     public ShapeCollector(Shape shape){
         this.shape=shape;
@@ -13,15 +14,19 @@ public class ShapeCollector {
 
     public void addFigure(Shape shape){
 
-    }
-    public void removeFigure(Shape shape){
 
     }
-    public Shape getFigure(int n){
+    public boolean removeFigure(Shape shape){
+
+    }
+    public ShapeCollector getFigure(int n){
 
         return null;
     }
-    public Shape showFigures(Shape shape){
+    public ShapeCollector showFigures(Shape shape){
         return null;
+    }
+    public int getFiguresQuantity() {
+        return shapes.size();
     }
 }
