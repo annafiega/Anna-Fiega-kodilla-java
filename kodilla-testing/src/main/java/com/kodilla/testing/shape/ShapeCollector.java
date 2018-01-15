@@ -6,12 +6,12 @@ public class ShapeCollector {
     Shape shape;
     ArrayList<Shape> shapes=new ArrayList<Shape>();
 
-    public ShapeCollector() {
-    }
+
 
     public ShapeCollector(Shape shape) {
         this.shapes = shapes;
         this.shape=shape;
+
     }
 
 
