@@ -44,7 +44,7 @@ public class ShapeCollectorTestSuite {
     }
     @Test
     public void testGetFigure(){
-
+        //given
         Circle circle = new Circle("circle", 2.5);
         ShapeCollector shapeCollector = new ShapeCollector(circle);
         shapeCollector.addFigure(circle);
@@ -55,5 +55,15 @@ public class ShapeCollectorTestSuite {
         Assert.assertEquals(shapeCollector, retrievedShape);
 
     }
+   /* @Test
+    public void testShowFigures(){
+        //given
+        ArrayList<Shape> shapes=new ArrayList();
+        shapes.add(new Circle("circle", 2.0));
+        shapes.add(new Square("square",'5'));
+        shapes.add (new Triangle("triangle", '8', '5'));
 
+        ArrayList result=shapes.showFigures();
+
+    }*/
 }
