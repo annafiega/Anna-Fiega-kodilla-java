@@ -25,7 +25,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddFigure (){
         Circle circle = new Circle("circle", 2.5);
-        ShapeCollector shapeCollector = new ShapeCollector (circle);
+        ShapeCollector shapeCollector = new ShapeCollector ();
         shapeCollector.addFigure(circle);
         Assert.assertEquals(1, shapeCollector.getFiguresQuantity());
 
@@ -33,7 +33,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testRemoveFigure(){
         Circle circle = new Circle("circle", 2.5);
-        ShapeCollector shapeCollector = new ShapeCollector(circle);
+        ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(circle);
         //When
         boolean result = shapeCollector.removeFigure(circle);
@@ -46,24 +46,31 @@ public class ShapeCollectorTestSuite {
     public void testGetFigure(){
         //given
         Circle circle = new Circle("circle", 2.5);
-        ShapeCollector shapeCollector = new ShapeCollector(circle);
+        ShapeCollector shapeCollector = new ShapeCollector();
         shapeCollector.addFigure(circle);
         //when
         Shape retrievedShape;
         retrievedShape= shapeCollector.getFigure(0);
         //then
-        Assert.assertEquals(shapeCollector, retrievedShape);
+        Assert.assertEquals(circle, retrievedShape);
 
     }
-   /* @Test
+    @Test
     public void testShowFigures(){
         //given
-        ArrayList<Shape> shapes=new ArrayList();
-        shapes.add(new Circle("circle", 2.0));
-        shapes.add(new Square("square",'5'));
-        shapes.add (new Triangle("triangle", '8', '5'));
+        Circle circle = new Circle("circle", 2);
+        Square square =new Square ("square", 5);
+        Triangle triangle=new Triangle ("triangle", 8, 5);
+        ShapeCollector shapeCollector = new ShapeCollector();
+        shapeCollector.addFigure(circle);
+        shapeCollector.addFigure(square);
+        shapeCollector.addFigure(triangle);
 
-        ArrayList result=shapes.showFigures();
+        String expected =("circle=12.56"+ "/n"+"square=25.0"+"/n"+"triangle=20.0"+"/n");
+        //when
+        String actual = shapeCollector.showFigures();
+        //then
+        Assert.assertEquals(expected, actual);
 
-    }*/
+    }
 }
