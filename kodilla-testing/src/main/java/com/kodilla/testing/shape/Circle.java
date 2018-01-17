@@ -2,7 +2,7 @@ package com.kodilla.testing.shape;
 
 import java.util.ArrayList;
 
-class Circle extends ArrayList<String> implements Shape{
+class Circle implements Shape{
     double radius;
     double pi = 3.14;
     String shapeName;
