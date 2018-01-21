@@ -26,9 +26,9 @@ public class ForumStatistic {
             this.numberOfPosts=0;
             this.numberOfComments=0;
             }else{
-            this.avgNumberOfPostsPerUser = this.numberOfPosts / numberOfUsers;
-            this.avgNumberOfCommentsPerUser = this.numberOfComments / numberOfUsers;
-            this.avgNubmerOfCommentsPerPost = this.numberOfComments / numberOfPosts;
+            this.avgNumberOfPostsPerUser = (double)this.numberOfPosts / numberOfUsers;
+            this.avgNumberOfCommentsPerUser = (double)this.numberOfComments / numberOfUsers;
+            this.avgNubmerOfCommentsPerPost = (double)this.numberOfComments / numberOfPosts;
         }
     }
     public String  showStatistics(){

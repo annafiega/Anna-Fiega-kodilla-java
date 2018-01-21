@@ -66,7 +66,7 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(square);
         shapeCollector.addFigure(triangle);
 
-        String expected =("circle=12.56"+ "/n"+"square=25.0"+"/n"+"triangle=20.0"+"/n");
+        String expected =("circle=12.56"+ "\n"+"square=25.0"+"\n"+"triangle=20.0"+"\n");
         //when
         String actual = shapeCollector.showFigures();
         //then
