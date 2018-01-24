@@ -1,15 +1,17 @@
 package com.kodilla.stream.forumuser;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public final class ForumUser {
     private final int numberID;
     private final String usersName;
-    private final char sex;
+    private final Character sex;
     private final LocalDate birthDate;
     private final int postNumber;
 
-    public ForumUser(int numberID, String usersName, char sex, int yearOfBirth,
+
+    public ForumUser(int numberID, String usersName, Character sex, int yearOfBirth,
                      int monthOfBirth, int dayOfBirth, int postNumber) {
         this.numberID = numberID;
         this.usersName = usersName;
@@ -26,7 +28,7 @@ public final class ForumUser {
         return usersName;
     }
 
-    public char getSex() {
+    public Character getSex() {
         return sex;
     }
 
@@ -48,4 +50,10 @@ public final class ForumUser {
                 ", postNumber=" + postNumber +
                 '}';
     }
+    public int getAge(){
+    LocalDate today = LocalDate.now();
+    Period p = Period.between(getDateOfBirth(), today);
+    return (p.getYears());
+    }
+
 }

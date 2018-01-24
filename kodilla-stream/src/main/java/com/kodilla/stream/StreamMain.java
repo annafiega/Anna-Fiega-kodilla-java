@@ -13,11 +13,14 @@ import com.kodilla.stream.lambda.Processor;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+import java.time.Period;
 import static com.kodilla.stream.beautifier.ConsoleColors.*;
+import static java.time.LocalDate.now;
 import static java.util.Locale.filter;
 
 
@@ -66,9 +69,11 @@ public class StreamMain {
 
 
         Forum forum=new Forum();
+
+
         Map<Integer,ForumUser> theResultMapOfUsers= forum.getUserList().stream()
-                .filter(s->s.getSex()==('M'))
-                .filter(s->s.getDateOfBirth().getYear()<1998)
+                .filter(s->s.getSex().equals('M'))
+                .filter(s->s.getAge()>=20)
                 .filter (s->s.getPostNumber()!=0)
                 .collect(Collectors.toMap(ForumUser::getNumberID, forumUser -> forumUser));
 
