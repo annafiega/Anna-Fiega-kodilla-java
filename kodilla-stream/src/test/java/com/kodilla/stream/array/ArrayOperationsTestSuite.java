@@ -8,12 +8,8 @@ import java.util.OptionalDouble;
 public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverage() {
-        //given
-       int[] numbers = new int[]{4, 6, 5, 5};
 
-        //when
-        OptionalDouble average = ArrayOperations.getAverage(numbers);
-
+        OptionalDouble average = ArrayOperations.getAverage(new int[]{4, 6, 5, 5});
        //then
         Assert.assertEquals(5.0,average.orElse(-1),0);
     }
