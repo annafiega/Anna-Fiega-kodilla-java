@@ -24,6 +24,5 @@ public class FirstChallenge {
         }finally{
             System.out.println("Calculation completed.");
         }
-
     }
 }
