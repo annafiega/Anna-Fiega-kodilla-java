@@ -1,6 +1,7 @@
 package com.kodilla.stream.portfolio;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -10,7 +11,9 @@ import java.util.OptionalDouble;
 
 import static java.util.stream.Collectors.toList;
 
+
 public class BoardTestSuite {
+
     public Board prepareTestData() {
         //users
         User user1 = new User("developer1", "John Smith");
@@ -150,7 +153,8 @@ public class BoardTestSuite {
                 .flatMap(tl -> tl.getTasks().stream())
                 .mapToDouble(t -> t.getDays())
                 .average();
-        //System.out.println ("Average: "+(averageWorkingOnTask.orElse(-1)));
+        //
+        // System.out.println ("Average: "+(averageWorkingOnTask.orElse(-1)));
 
         Assert.assertEquals(10, averageWorkingOnTask.orElse(-1),0);
 
