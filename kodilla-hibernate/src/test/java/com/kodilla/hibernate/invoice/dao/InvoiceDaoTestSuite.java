@@ -19,6 +19,10 @@ public class InvoiceDaoTestSuite {
 
     @Autowired
     private InvoiceDao invoiceDao;
+    @Autowired
+    private ProductDao productDao;
+    @Autowired
+    private ItemDao itemDao;
 
     @Test
     public void testInvoiceDaoSave(){
@@ -40,9 +44,15 @@ public class InvoiceDaoTestSuite {
         //When
         invoiceDao.save(invoice);
         int id = invoice.getId();
+        int id1=pro1.getId();
+        int id2=item1.getId();
+        Product readProduct=productDao.findOne(id1);
+        Item readItem=itemDao.findOne(id2);
 
         //Then
         Assert.assertNotEquals(0, id);
+        Assert.assertEquals(id1,readProduct.getId());
+        Assert.assertEquals(id2, readItem.getId());
 
         //CleanUp
         invoiceDao.delete(invoice);
