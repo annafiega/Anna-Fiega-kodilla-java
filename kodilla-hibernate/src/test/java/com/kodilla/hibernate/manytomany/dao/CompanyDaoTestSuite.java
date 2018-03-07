@@ -69,18 +69,16 @@ public class CompanyDaoTestSuite {
             Employee amandaKovalsky = new Employee("Amanda", "Kovalsky");
 
             employeeDao.save(johnSmith);
-            int johnSmithId =johnSmith.getId();
             employeeDao.save(stephanieClarckson);
             employeeDao.save(lindaKovalsky);
             employeeDao.save(amandaKovalsky);
 
             //When
             List<Employee> findByLastnameOfEmployee=employeeDao.retrieveLastnameOfEmployee("Kovalsky");
-            Employee readEmployee=employeeDao.findOne(johnSmithId);
 
             //Then
             Assert.assertEquals(2, findByLastnameOfEmployee.size());
-            Assert.assertEquals(4, readEmployee.getId());
+
         }
 
     @Test
@@ -93,7 +91,6 @@ public class CompanyDaoTestSuite {
         Company softshell = new Company("Softshell");
 
         companyDao.save(softwareMachine);
-        int softwareMachineId = softwareMachine.getId();
         companyDao.save(dataMaesters);
         companyDao.save(greyMatter);
         companyDao.save(sofy);
@@ -101,11 +98,10 @@ public class CompanyDaoTestSuite {
 
         //When
         List<Company> copmanyNameWithPrefix = companyDao.retrieveCompaniesNameWithPrefix("Sof");
-        Company readCompany = companyDao.findOne(softwareMachineId);
 
         //Then
         Assert.assertEquals(3, copmanyNameWithPrefix.size());
-        Assert.assertEquals(4, readCompany.getId());
+
     }
 }
 
