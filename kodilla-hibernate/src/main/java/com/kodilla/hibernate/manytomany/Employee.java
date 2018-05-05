@@ -4,11 +4,18 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+@NamedQueries({
+    @NamedQuery(
+            name="Employee.retrieveLastnameOfEmployee",
+            query="FROM Employee WHERE lastname=:LASTNAME "
+    ),
 
-@NamedQuery(
-        name="Employee.retrieveLastnameOfEmployee",
-        query="FROM Employee WHERE lastname=:LASTNAME "
-)
+   @NamedQuery(
+            name = "Employee.searchEmployeeNameByPrefix",
+            query = "FROM Employee WHERE lastname LIKE CONCAT('%', :PREFIX, '%')"
+    )
+})
+
 
 @Entity
 @Table(name = "EMPLOYEES")

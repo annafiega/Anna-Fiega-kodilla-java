@@ -13,6 +13,10 @@ import java.util.List;
 @Repository
 public interface CompanyDao extends CrudRepository<Company, Integer> {
 
-    @Query (nativeQuery = true)
-    List<Company>retrieveCompaniesNameWithPrefix(@Param ("PREFIX")String prefix);
+    @Query(nativeQuery = true)
+    List<Company> retrieveCompaniesNameWithPrefix(@Param("PREFIX") String prefix);
+
+
+    @Query(nativeQuery = true)
+    List<Company> searchCompaniesNameByPrefix(@Param("PREFIX") String prefix);
 }

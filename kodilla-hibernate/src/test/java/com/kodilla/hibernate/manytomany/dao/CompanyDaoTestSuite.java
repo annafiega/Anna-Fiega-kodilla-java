@@ -2,6 +2,8 @@ package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
+import com.kodilla.hibernate.manytomany.facade.Facade;
+import com.kodilla.hibernate.manytomany.facade.SearchProcessingException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Transactional
@@ -22,6 +25,9 @@ public class CompanyDaoTestSuite {
 
     @Autowired
     EmployeeDao employeeDao;
+
+    @Autowired
+    Facade facade;
 
     @Test
     public void testSaveManyToMany(){

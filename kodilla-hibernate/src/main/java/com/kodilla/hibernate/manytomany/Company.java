@@ -1,15 +1,29 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.springframework.stereotype.Service;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
-        name="Company.retrieveCompaniesNameWithPrefix",
-        query = "SELECT * FROM companies WHERE SUBSTRING(company_name,1,3)=:PREFIX",
-        resultClass=Company.class
-)
+
+
+@NamedNativeQueries({
+        @NamedNativeQuery(
+                name = "Company.retrieveCompaniesNameWithPrefix",
+                query = "SELECT * FROM companies WHERE SUBSTRING(company_name,1,3)=:PREFIX",
+                resultClass = Company.class
+        ),
+
+        @NamedNativeQuery(
+                name = "Company.searchCompaniesNameByPrefix",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT ('%',:PREFIX,'%')",
+                resultClass = Company.class
+        )
+})
+
+
 
 @Entity
 @Table(name = "COMPANIES")
