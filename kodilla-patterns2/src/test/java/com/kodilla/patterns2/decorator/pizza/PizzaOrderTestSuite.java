@@ -42,7 +42,7 @@ public class PizzaOrderTestSuite {
         //when
         String description=pizzaOrder.getDescription();
         //then
-        assertEquals("Ingredients: cheese, tomato souse +[onion, mushrooms, ham]", description.toString());
+        assertEquals("Ingredients: cheese, tomato souse + [onion, mushrooms, ham]", description);
     }
 
 
@@ -80,6 +80,6 @@ public class PizzaOrderTestSuite {
         //when
         String description=pizzaOrder.getDescription();
         //then
-        assertEquals("Ingredients: cheese, tomato souse + extra cheese + [onion, mushrooms, ham]", description.toString());
+        assertEquals("Ingredients: cheese, tomato souse + extra cheese + [onion, mushrooms, ham]", description);
     }
 }
