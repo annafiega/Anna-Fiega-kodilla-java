@@ -17,6 +17,7 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;import java.util.List;
 
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class FacadeTestSuite {
@@ -24,11 +25,24 @@ public class FacadeTestSuite {
     @Autowired
     private Facade facade;
 
+    @Autowired
+    CompanyDao companyDao;
+
+    @Autowired
+    EmployeeDao employeeDao;
+
     @Test
 
     public void testSearchCompanyByName(){
 
-        final String prefix="Sof";
+        final String prefix="me";
+
+        Company meble = new Company("Meble");
+        Company metalurgia= new Company("Metalurgia");
+
+
+        companyDao.save(meble);
+        companyDao.save(metalurgia);
 
         try{
             List <Company>resultList=facade.searchCompanyByName(prefix);
@@ -39,7 +53,13 @@ public class FacadeTestSuite {
     @Test
 
     public void testSearchEmployeeByName(){
-        final String prefix="Smi";
+        final String prefix="Owa";
+
+        Employee nowak = new Employee("Adam","Nowak");
+        Employee kowalski = new Employee("Adam","Kowalski");
+
+        employeeDao.save(nowak);
+        employeeDao.save(kowalski);
 
         try{
             List <Employee>resultList=facade.searchEmployeeByName(prefix);
