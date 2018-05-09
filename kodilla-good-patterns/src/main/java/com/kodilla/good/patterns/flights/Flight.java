@@ -24,7 +24,7 @@ public class Flight {
     public String getStopoverAirport() {
         return stopoverAirport;
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

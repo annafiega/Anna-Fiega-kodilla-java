@@ -7,6 +7,7 @@ import com.kodilla.hibernate.manytomany.dao.CompanyDao;
 import com.kodilla.hibernate.manytomany.dao.EmployeeDao;
 import com.kodilla.hibernate.manytomany.facade.Facade;
 import com.kodilla.hibernate.manytomany.facade.SearchProcessingException;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class FacadeTestSuite {
     @Autowired
     EmployeeDao employeeDao;
 
+
     @Test
 
     public void testSearchCompanyByName(){
@@ -53,10 +55,10 @@ public class FacadeTestSuite {
     @Test
 
     public void testSearchEmployeeByName(){
-        final String prefix="Owa";
+        final String prefix="Ova";
 
-        Employee nowak = new Employee("Adam","Nowak");
-        Employee kowalski = new Employee("Adam","Kowalski");
+        Employee nowak = new Employee("Adam","Novak");
+        Employee kowalski = new Employee("Adam","Kovalski");
 
         employeeDao.save(nowak);
         employeeDao.save(kowalski);
