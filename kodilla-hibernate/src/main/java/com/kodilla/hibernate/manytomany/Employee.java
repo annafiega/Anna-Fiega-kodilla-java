@@ -1,9 +1,13 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedQueries({
     @NamedQuery(
             name="Employee.retrieveLastnameOfEmployee",
@@ -70,6 +74,7 @@ public class Employee {
     private void setId(int id) {
         this.id = id;
     }
+
 
     private void setFirstname(String firstname) {
         this.firstname = firstname;
