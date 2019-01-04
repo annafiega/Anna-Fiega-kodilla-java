@@ -17,7 +17,6 @@ public class OddNumbersExterminator {
                 evenNumbers.add(temporaryValue);
             }
         }
-
         return evenNumbers;
     }
 

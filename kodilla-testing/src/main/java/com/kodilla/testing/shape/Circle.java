@@ -1,11 +1,16 @@
 package com.kodilla.testing.shape;
-public abstract class Circle implements Shape{
-    double radius;
-    double pi;
 
-    public Circle (double radius, double pi){
+import java.util.ArrayList;
+
+class Circle implements Shape{
+    double radius;
+    double pi = 3.14;
+    String shapeName;
+
+    public Circle (String shapeName,double radius){
+        this.shapeName=shapeName;
         this.radius=radius;
-        this.pi=pi;
+
 
     }
     public double getRadious(){
@@ -16,12 +21,12 @@ public abstract class Circle implements Shape{
         return pi;
     }
 
-    public void getShapeName() {
-        System.out.println("Circle");
+    public String getShapeName() {
+        return shapeName;
 
     }
-     double getField(double radius, double pi) {
-
+    @Override
+     public double getField() {
 
         return radius*radius*pi;
     }

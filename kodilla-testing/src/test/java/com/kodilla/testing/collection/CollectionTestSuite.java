@@ -42,9 +42,12 @@ public class CollectionTestSuite {
 
     @Test
     public void testOddNumbersExterminatorEmptyList() {
+        //given
         OddNumbersExterminator tester = new OddNumbersExterminator();
         ArrayList<Integer> numbers = new ArrayList();
+        //when
         ArrayList<Integer> actual = tester.exterminate(numbers);
-        Assert.assertEquals(numbers, actual);
+        //then
+        Assert.assertEquals(0,actual.size());
     }
 }
