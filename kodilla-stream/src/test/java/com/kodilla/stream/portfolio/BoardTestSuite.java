@@ -13,6 +13,12 @@ import static java.util.stream.Collectors.toList;
 
 
 public class BoardTestSuite {
+    Board project= null;
+
+     @Before
+     public void setUp() throws Exception {
+         project =prepareTestData();
+     }
 
     public Board prepareTestData() {
         //users
@@ -78,8 +84,7 @@ public class BoardTestSuite {
 
     @Test
     public void testAddTaskList() {
-        //Given
-        Board project = prepareTestData();
+
         //When
 
         //Then
@@ -88,8 +93,7 @@ public class BoardTestSuite {
 
     @Test
     public void testAddTaskListFindUsersTasks() {
-        //Given
-        Board project = prepareTestData();
+
         //When
         User user = new User("developer1", "John Smith");
         List<Task> tasks = project.getTaskLists().stream()
@@ -103,8 +107,6 @@ public class BoardTestSuite {
     }
     @Test
     public void testAddTaskListFindOutdatedTasks() {
-        //Given
-        Board project = prepareTestData();
 
         //When
         List<TaskList> undoneTasks = new ArrayList<>();
@@ -122,8 +124,7 @@ public class BoardTestSuite {
     }
     @Test
     public void testAddTaskListFindLongTasks() {
-        //Given
-        Board project = prepareTestData();
+
 
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
@@ -142,8 +143,7 @@ public class BoardTestSuite {
 
     @Test
     public void testAddTaskListAverageWorkingOnTask(){
-        //Given
-        Board project = prepareTestData();
+
 
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
@@ -154,7 +154,7 @@ public class BoardTestSuite {
                 .mapToDouble(t -> t.getDays())
                 .average();
         //
-        // System.out.println ("Average: "+(averageWorkingOnTask.orElse(-1)));
+         System.out.println ("Average: "+(averageWorkingOnTask.orElse(-1)));
 
         Assert.assertEquals(10, averageWorkingOnTask.orElse(-1),0);
 

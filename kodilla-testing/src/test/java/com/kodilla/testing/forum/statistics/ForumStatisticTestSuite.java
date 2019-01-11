@@ -188,6 +188,7 @@ public class ForumStatisticTestSuite {
         Assert.assertEquals(100, forumStatistic.numberOfUsers);
         Assert.assertEquals(45, forumStatistic.numberOfPosts);
         Assert.assertEquals(125, forumStatistic.numberOfComments);
+        Assert.assertEquals(0.45,forumStatistic.avgNumberOfPostsPerUser,0);
     }
 
 }

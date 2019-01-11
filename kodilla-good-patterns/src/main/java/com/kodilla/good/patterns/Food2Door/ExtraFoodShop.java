@@ -3,7 +3,8 @@ package com.kodilla.good.patterns.Food2Door;
 import java.time.LocalDate;
 import java.util.List;
 
-public class ExtraFoodShop implements OrderService {
+public class ExtraFoodShop  implements OrderService  {
+
 
     private String deliveryAddress=("ul. Krupnicza 36, 36-589 Kraków");
 
@@ -13,5 +14,6 @@ public class ExtraFoodShop implements OrderService {
         System.out.println( "Date of supply: " + supplyDate.toString()+"\n"+"Delivery address: "+ deliveryAddress);
         return true;
     }
+
 }
 

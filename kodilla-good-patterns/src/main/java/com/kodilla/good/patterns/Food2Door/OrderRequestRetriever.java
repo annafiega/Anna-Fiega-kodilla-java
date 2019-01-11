@@ -7,7 +7,7 @@ import java.util.List;
 public class OrderRequestRetriever {
 
     public OrderRequest retrive(){
-        Supplier supplier=new Supplier("ExtraFoodShop");
+        Supplier supplier=  new Supplier("ExtraFoodShop");
         LocalDate orderDate= LocalDate.of(2018, 2,1);
         List<Product> orderList=new ArrayList<>();
         orderList.add(new Product("apple",10.0,3.25));

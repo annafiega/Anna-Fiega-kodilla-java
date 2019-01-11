@@ -38,7 +38,7 @@ class Aplication{
 
         Map<String, List<String>> theResultMap = movieStore.getMovies();
         String result = theResultMap.entrySet().stream()
-                .map(entry -> entry.getKey() + " " + entry.getValue())
+                .map(entry -> entry.toString())
                 .collect(Collectors.joining(" ! ","",""));
         System.out.println(result);
     }

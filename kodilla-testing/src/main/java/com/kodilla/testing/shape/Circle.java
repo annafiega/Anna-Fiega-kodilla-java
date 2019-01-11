@@ -13,7 +13,7 @@ class Circle implements Shape{
 
 
     }
-    public double getRadious(){
+    public double getRadius(){
         return radius;
     }
 

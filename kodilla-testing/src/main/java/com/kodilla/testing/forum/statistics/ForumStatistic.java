@@ -7,7 +7,7 @@ public class ForumStatistic {
     public int numberOfUsers;
     public int numberOfPosts;
     public int numberOfComments;
-    private double avgNumberOfPostsPerUser;
+    public double avgNumberOfPostsPerUser;
     private double avgNumberOfCommentsPerUser;
     private double avgNubmerOfCommentsPerPost;
     Statistics statistics;

@@ -7,7 +7,7 @@ public class OddNumbersExterminator {
 
     ArrayList<Integer>evenNumbers;
 
-    public ArrayList<Integer> exterminate(ArrayList<Integer> numbers){
+   /* public ArrayList<Integer> exterminate(ArrayList<Integer> numbers){
         evenNumbers=new ArrayList<Integer>();
         int temporaryValue = 0;
         for (int n=0; n<numbers.size(); n++){
@@ -15,6 +15,17 @@ public class OddNumbersExterminator {
 
             if (temporaryValue % 2 == 0){
                 evenNumbers.add(temporaryValue);
+            }
+        }
+        return evenNumbers;
+    }*/
+
+    public ArrayList<Integer> exterminate(ArrayList<Integer> numbers){
+        evenNumbers=new ArrayList<Integer>();
+        for ( int number: numbers){
+
+            if (number % 2 == 0){
+                evenNumbers.add(number);
             }
         }
         return evenNumbers;
