@@ -1,0 +1,4 @@
+ziemniak;polski;2.5;10;
+Eggs;od kury;3.99;20;
+maslo;extra;6;100;
+Milk;wiejskie;3.86;10;

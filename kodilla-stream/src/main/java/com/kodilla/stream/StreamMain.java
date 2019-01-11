@@ -40,7 +40,7 @@ public class StreamMain {
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::multiplyAByB);
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
         expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
+        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);*/
 
 
         System.out.println("Poem Beautifier");
@@ -53,7 +53,7 @@ public class StreamMain {
 
 
 
-        System.out.println("Using Stream to generate even numbers from 1 to 20");
+       /* System.out.println("Using Stream to generate even numbers from 1 to 20");
         NumbersGenerator.generateEven(20);
 
 
@@ -69,7 +69,7 @@ public class StreamMain {
                 .forEach(System.out::println);*/
 
 
-        Forum forum=new Forum();
+       /* Forum forum=new Forum();
 
 
         Map<Integer,ForumUser> theResultMapOfUsers= forum.getUserList().stream()
@@ -80,7 +80,7 @@ public class StreamMain {
 
         theResultMapOfUsers.entrySet().stream()
                 .map(entry->entry.getKey()+": "+entry.getValue())
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
     }
 
 

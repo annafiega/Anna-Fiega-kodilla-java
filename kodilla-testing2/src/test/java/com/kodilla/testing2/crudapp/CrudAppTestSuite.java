@@ -3,6 +3,7 @@ package com.kodilla.testing2.crudapp;
 import com.kodilla.testing2.config.WebDriverConfig;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -117,7 +118,7 @@ public class CrudAppTestSuite {
 
         Thread.sleep(2000);
     }
-
+@Ignore
     @Test
     public void shouldCreateTrelloCard() throws InterruptedException{
         String taskName=createCrudAppTestTask();

@@ -51,9 +51,15 @@ public final class ForumUser {
                 '}';
     }
     public int getAge(){
-    LocalDate today = LocalDate.now();
-    Period p = Period.between(getDateOfBirth(), today);
-    return (p.getYears());
+        LocalDate today = LocalDate.now();
+        //Period p = Period.between(getDateOfBirth(), today);
+        return Period.between(getDateOfBirth(), today).getYears();
     }
+
+   /* public int getAge(){
+        LocalDate today = LocalDate.now();
+        Period p = Period.between(getDateOfBirth(), today);
+        return (p.getYears());
+    }*/
 
 }
